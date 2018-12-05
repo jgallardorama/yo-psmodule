@@ -6,7 +6,7 @@ function Get-__PSMODULEINFIX__Version {
 
     }
     process {
-        Write-Output "1.0.2"
+        Write-Output "0.1.0"
     }
     end {
         
