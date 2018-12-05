@@ -1,5 +1,5 @@
 #
-# Module manifest for module '%%MYPSMODULE%%'
+# Module manifest for module '<%= moduleName %>'
 #
 #
 

@@ -9,7 +9,7 @@ $Scripts = $Scripts | Where-Object { $_ -notlike "*\Scripts\*"}
 #Dot source the files
 Foreach ($import in $Scripts) {    
     Try {
-        Write-Verbose "> Importando <$($import.fullname)>"
+        Write-Verbose "> Importing: <$($import.fullname)>"
         . $import.fullname
     }
     Catch {
@@ -23,6 +23,6 @@ Foreach ($import in $Scripts) {
 # Set variables visible to the module and its functions only
 
 Foreach ($export in $Public) {
-    Write-Verbose "> Exportando <$($export.Basename)>"
+    Write-Verbose "> Exporting: <$($export.Basename)>"
     Export-ModuleMember -Function $export.Basename
 }
