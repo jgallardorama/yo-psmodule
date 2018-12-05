@@ -1,4 +1,4 @@
-function Get-__PSMODULEINFIX__TBDPrivateMethodName {
+function Get-<%= moduleInfix %>TBDPrivateMethodName {
   [cmdletbinding()]
   Param (
     [parameter(ValueFromPipeline = $True)]

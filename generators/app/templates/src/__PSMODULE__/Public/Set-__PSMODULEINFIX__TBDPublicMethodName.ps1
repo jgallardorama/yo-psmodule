@@ -1,4 +1,4 @@
-function Set-__PSMODULEINFIX__TBDPublicMethodName  {
+function Set-<%= moduleInfix %>TBDPublicMethodName  {
   [cmdletbinding()]
   Param (
     [parameter(ValueFromPipeline = $True)]

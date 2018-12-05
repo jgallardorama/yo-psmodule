@@ -1,4 +1,4 @@
-function Get-__PSMODULEINFIX__Version {
+function Get-<%= moduleInfix %>Version {
   param(
 
   )
