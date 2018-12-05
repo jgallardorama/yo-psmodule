@@ -1,14 +1,14 @@
 function Get-__PSMODULEINFIX__Version {
-    param(
+  param(
 
-    )
-    begin {
+  )
+  begin {
 
-    }
-    process {
-        Write-Output "0.1.0"
-    }
-    end {
+  }
+  process {
+    Write-Output "0.1.0"
+  }
+  end {
         
-    }
+  }
 }

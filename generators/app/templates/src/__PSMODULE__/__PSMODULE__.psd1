@@ -15,7 +15,7 @@
     # CompatiblePSEditions = @()
 
     # ID used to uniquely identify this module
-    GUID              = '%%MYPSMODULEGUID%%'
+    GUID              = '<%= guid %>'
 
     # Author of this module
     Author            = '<tbd-author>'

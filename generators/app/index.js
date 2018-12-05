@@ -1,10 +1,12 @@
 var Generator = require('yeoman-generator');
 var glob = require("glob")
+var uuidv1 = require('uuid/v1');
 
 module.exports = class extends Generator {
 
     prompting() {
         var self = this;
+
         return this.prompt([{
                 type: 'input',
                 name: 'moduleName',
@@ -20,6 +22,9 @@ module.exports = class extends Generator {
         ]).then((answers) => {
             this.log('app name', answers.moduleName);
             self.props = answers;
+
+            var guid = uuidv1();
+            self.props.guid = guid;
         });
     }
 
@@ -40,7 +45,7 @@ module.exports = class extends Generator {
                     console.log(file);
                     var destinationFile = file.replace(/__PSMODULEINFIX__/g, self.props.moduleInfix)
                     destinationFile = destinationFile.replace(/__PSMODULE__/g, self.props.moduleName);
-
+                  
                     self._copyTpl(file, destinationFile);
                 });
             });
@@ -55,7 +60,8 @@ module.exports = class extends Generator {
             this.templatePath(file),
             this.destinationPath(destination), {
                 moduleName: self.props.moduleName,
-                moduleInfix: self.props.moduleInfix
+                moduleInfix: self.props.moduleInfix,
+                guid: self.props.guid
             }
         );
     }
